@@ -15,3 +15,4 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     image = models.ImageField(upload_to='posts/', null=True, blank=True)
     excerpt = models.TextField(null=True, blank=True)
+    updated_on = models.DateTimeField(auto_now=True)
