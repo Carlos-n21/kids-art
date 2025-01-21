@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-carlosn21-kidsart-mhki6cilulh.ws.codeinstitute-ide.net', '.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['8000-carlosn21-kidsart-mhki6cilulh.ws.codeinstitute-ide.net', '.herokuapp.com', '127.0.0.1', 'localhost', 'kids-art-03ecd75b696a.herokuapp.com']
 
 
 # Application definition
