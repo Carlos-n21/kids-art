@@ -145,3 +145,8 @@ def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id, post__author=request.user)
     comment.delete()
     return redirect('profile')
+
+def search(request):
+    query = request.GET.get('q')
+    results = Post.objects.filter(title__icontains=query, status=1) if query else None
+    return render(request, 'blog/search_results.html', {'query': query, 'results': results})
