@@ -17,8 +17,6 @@ class Post(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    image = models.ImageField(upload_to='posts/', null=True, blank=True)   # allows image upload to post
-    excerpt = models.TextField(null=True, blank=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
