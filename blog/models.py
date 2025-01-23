@@ -8,13 +8,13 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Post model
 class Post(models.Model):
-    title = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=50, unique=True)  # Title with max 50 characters
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     featured_image = CloudinaryField('image', default='placeholder')
-    content = models.TextField()
+    content = models.CharField(max_length=150)  # Content with max 150 characters
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     updated_on = models.DateTimeField(auto_now=True)
@@ -22,9 +22,6 @@ class Post(models.Model):
     class Meta:
         ordering = ["-created_on"]  # orders the comments by descending order, with last comment on top and first on bottom 
         
-    def __str__(self):
-        return f"The title of this post is {self.title}"
-
     def __str__(self):
         return f"{self.title} | written by {self.author}"
 
@@ -41,3 +38,16 @@ class Comment(models.Model):
         
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
+# filepath: /workspace/kids-art/blog/forms.py
+from django import forms
+from .models import Post
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'slug', 'featured_image', 'content', 'status']
+        widgets = {
+            'title': forms.TextInput(attrs={'maxlength': 50}),
+            'content': forms.Textarea(attrs={'maxlength': 150}),
+        }

@@ -1,9 +1,10 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 # Create your views here.
 
@@ -43,8 +44,9 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-
-    comment_form = CommentForm()
+            return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    else:
+        comment_form = CommentForm()
 
     return render(
         request, "blog/post_detail.html", 
@@ -94,3 +96,52 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+@login_required
+def create_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user  # Set the author to the logged-in user
+            post.save()
+            return redirect('post_detail', slug=post.slug)
+    else:
+        form = PostForm()
+    return render(request, 'blog/create_post.html', {'form': form})
+
+@login_required
+def edit_post(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            return redirect('post_detail', slug=post.slug)
+    else:
+        form = PostForm(instance=post)
+    return render(request, 'blog/edit_post.html', {'form': form, 'post': post})
+
+@login_required
+def delete_post(request, slug):
+    post = get_object_or_404(Post, slug=slug, author=request.user)
+    post.delete()
+    return redirect('profile')
+
+@login_required
+def profile(request):
+    posts = Post.objects.filter(author=request.user)
+    return render(request, 'blog/profile.html', {'posts': posts})
+
+@login_required
+def approve_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id, post__author=request.user)
+    comment.approved = True
+    comment.save()
+    return redirect('profile')
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id, post__author=request.user)
+    comment.delete()
+    return redirect('profile')
