@@ -11,7 +11,7 @@
 <html class="h-100" lang="en">
 
 <head>
-    <title>Kids-Art</title>
+    <title>{% block title %}Kids-Art{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
     <meta name="description" content="Kids Art is a platform for kids to showcase their art work">
@@ -31,7 +31,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    {% block extra_head %}{% endblock %}
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -39,7 +39,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Kids-Art</a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">Kids-Art</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -55,6 +55,12 @@
                             href="{% url 'about' %}">About</a>
                     </li>
                     {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'create_post' %}">Create Post</a>
+                    </li>
                     <li class="nav-item">
 	                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                     </li>
