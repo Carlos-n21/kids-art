@@ -5,13 +5,22 @@
     <h2>Search Results</h2>
     {% if query %}
         <p>Results for "{{ query }}":</p>
-        <ul>
+        <div class="row">
             {% for post in results %}
-                <li>
-                    <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
-                </li>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <a href="{% url 'post_detail' post.slug %}">
+                        <img src="{{ post.featured_image.url }}" class="card-img-top" alt="{{ post.title }}">
+                    </a>
+                    <div class="card-body">
+                        <a href="{% url 'post_detail' post.slug %}">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
     {% else %}
         <p>No results found.</p>
     {% endif %}
