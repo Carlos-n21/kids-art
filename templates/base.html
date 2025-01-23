@@ -101,11 +101,12 @@
     </div>
 
     <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
+        <!-- Code commented left commented out in case in needed in the future -->
+        <!-- {% if user.is_authenticated %}
         <p class="text-end m-3">You are logged in as {{ user }}</p>
         {% else %}
         <p class="text-end m-3">You are not logged in</p>
-        {% endif %}
+        {% endif %} -->
 
         {% block content %}
         <!-- Content Goes here -->
