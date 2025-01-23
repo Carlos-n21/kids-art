@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import CommentForm, PostForm
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -130,8 +131,11 @@ def delete_post(request, slug):
 
 @login_required
 def profile(request):
-    posts = Post.objects.filter(author=request.user)
-    return render(request, 'blog/profile.html', {'posts': posts})
+    user_posts = Post.objects.filter(author=request.user, status=1).order_by('-created_on')
+    paginator = Paginator(user_posts, 6)  # Show 6 posts per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'blog/profile.html', {'posts': page_obj, 'is_paginated': page_obj.has_other_pages()})
 
 @login_required
 def approve_comment(request, comment_id):
