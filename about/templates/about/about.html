@@ -3,25 +3,32 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container-fluid">
+    <!-- Image between navbar and posts -->
     <div class="row">
-        <div class="col-12 col-md-4 text-center">
-            <img src="{% static 'images/nobody.jpg' %}" width="75%">
-        </div>
-        <div class="col-12 col-md-8">
-            <h2>{{ about.title }}</h2>
-            {{ about.content | safe }}
+        <div class="col-12 position-relative">
+            <img src="{% static 'images/painting-ideas.jpg' %}" class="img-fluid mt-3 full-width-image" alt="Painting Ideas">
+            <img src="{% static 'images/logo-no-background.png' %}" class="overlay-image" alt="Logo">
         </div>
     </div>
-    <div class="row">
-        <div class="col text-right">
-          <!-- Updated on field goes in here -->
-    
-          <p class="text-end"><em>Updated on: {{ about.updated_on }}</em></p>
+    <div class="row mt-5">
+        <div class="col-md-10 offset-md-1">
+            <h2>About Kids-Art</h2>
+            <p>Welcome to Kids-Art, a delightful digital gallery where your child's creativity comes to life! At Kids-Art, we believe that every piece of art tells a unique story, and we're here to celebrate the boundless imagination of young artists everywhere.</p>
+            <h3>Our Mission</h3>
+            <p>Our mission is simple: to provide a safe and joyful platform where children can showcase their artwork, share their creativity, and connect with a supportive community of family, friends, and fellow art enthusiasts.</p>
+            <h3>How It Works</h3>
+            <p>Kids-Art is designed to be easy and fun! Users can:</p>
+            <ul>
+                <li><strong>Login/Create Account:</strong> Login into your account or "Register" on the top-right corner.</li>
+                <li><strong>Post Images:</strong> Upload photos of your child's artwork directly to the platform.</li>
+                <li><strong>Add Titles and Descriptions:</strong> Give each masterpiece a fitting title and a brief description that captures the essence of the artwork.</li>
+                <li><strong>Share with Loved Ones:</strong> Share your child's creative journey with family, friends, and other users who will appreciate and celebrate each unique piece.</li>
+            </ul>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-10">
             <h2>Let's collaborate!</h2>
             <p>I believe in the power of shared knowledge and collective effort.
                 Whether you have a project in mind, wish to co-author
@@ -38,4 +45,4 @@
         </div>
     </div>
 </div>
-{% endblock content %}
+{% endblock %}

@@ -10,5 +10,6 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('approve_comment/<int:comment_id>/', views.approve_comment, name='approve_comment'),
     path('post/<slug:slug>/delete_comment/<int:comment_id>/', views.comment_delete, name='delete_comment'),
+    path('post/<slug:slug>/edit_comment/<int:comment_id>/', views.comment_edit, name='edit_comment'),
     path('search/', views.search, name='search'),
 ]
