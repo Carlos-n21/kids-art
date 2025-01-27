@@ -20,8 +20,10 @@ Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd
     - [Imagery](#imagery)
 - [Website Features](#website-features)
     - [Homepage](#homepage)
-    - [Single Javascript Makes Multiple Pages](#single-javascript-makes-multiple-pages)
     - [Footer](#footer)
+    - [Pagination](#pagination)
+    - [Profile](#profile)
+    - [Create Post](#create-post)
 - [Responsive Design](#responsive-design)
 - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
@@ -85,8 +87,7 @@ Initial layout of website:
   <img src="images_readme/mobile-view1.png">
   <img src="images_readme/mobile-view2.png">
   <img src="images_readme/menu.png">
-  
-  
+   
 - Tablet view:<br>
   <img src="images_readme/tablet-PC-view.png"> 
 
@@ -164,6 +165,7 @@ Almost all of the website content is reponsive to different screen sizes that di
 - Add likes to posts.
 - Share posts on social media.
 - Create albums with the posts created
+- Add feature on Admin Panel to check which comments are approved and which are waiting for approval
 
 ## Technologies Used
 ### Languages and Technologies
@@ -243,6 +245,7 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ### HTML Validation
 - Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed. No errors found after fixing.
+<details>
   <img src="images_readme/HTML-homepage-check.png">
   <img src="images_readme/HTML-about-check.png">
   <img src="images_readme/HTML-register-check.png">
@@ -250,6 +253,7 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
   <img src="images_readme/HTML-profile-check.png">
   <img src="images_readme/HTML-edit-post-check.png">
   <img src="images_readme/HTML-create-post-check.png">
+</details>
 
 
 ### CSS Validation
@@ -261,7 +265,7 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 ### Lighthouse Audit
 
 - Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility.<br>
-
+<details>
   <img src="images_readme/lighthouse-home.png">
   <img src="images_readme/lighthouse-about.png">
   <img src="images_readme/lighthouse-register.png">
@@ -269,9 +273,11 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
   <img src="images_readme/lighthouse-profile.png">
   <img src="images_readme/lighthouse-editpost.png">
   <img src="images_readme/lighthouse-newpost.png">
-  
+</details>
 
-## Test Results Summary
+
+### Test Results Summary
+<details>
 
 ### 1. Test for Rendering the About Page with Collaboration Form
 
@@ -353,27 +359,7 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
   - Status code is 200 (OK).
   - Page content includes specific text related to the user profile.
 
-
-## Test Results Summary
-
-### 1. Test for Rendering the Blog Post Detail Page with Comment Form
-
-- **Test Name**: `test_render_post_detail_page_with_comment_form`
-- **Description**: Verifies that the blog post detail page is rendered correctly and contains the comment form.
-- **Expected Outcome**:
-  - Status code is 200 (OK).
-  - Page content includes specific text: "Blog title", "Blog content".
-  - Comment form is included in the context.
-
-### 2. Test for Submitting a Comment on a Blog Post
-
-- **Test Name**: `test_successful_comment_submission`
-- **Description**: Verifies that a comment can be successfully submitted on a blog post.
-- **Expected Outcome**:
-  - Status code is 200 (OK).
-  - Page content includes specific text: "Comment submitted and awaiting approval".
-
-### 3. Test for Submitting a Collaboration Request
+### 11. Test for Submitting a Collaboration Request
 
 - **Test Name**: `test_successful_collaboration_request_submission`
 - **Description**: Verifies that a collaboration request can be successfully submitted.
@@ -381,22 +367,25 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
   - Status code is 200 (OK).
   - Page content includes specific text: "Collaboration request received! I endeavour to respond within 2 working days."
 
-### 4. Test for Search Functionality
+### 12. Test for Search Functionality
 
 - **Test Name**: `test_search_functionality`
 - **Description**: Verifies that the search functionality works correctly and returns the expected results.
 - **Expected Outcome**:
   - Status code is 200 (OK).
   - Page content includes search results matching the query.
+</details>
 
 
-# ERD
+### ERD
 
+  <img src="images_readme/ERD-form.png">
 
 
 ### Bugs yet to be Fixed
 - Comments update function on posts not working well, able to show updated comment but not deleting comment that was edited.
 - When creating a new post, only able to publish and not safe as draft at the momment, site crashing, tried to debug, but unable to fix by the time of subimssion.
+- "Currently" (image) on "Edit Post" page not showing link or image. Image showing under content. Was able to get this working once, but did not saved it, and was not able to get it to work again. Image still shows at the bottom, before update but extra field looks to be part of crispy forms and was not able to make it work.
 
 
 [Back to top](#top)
@@ -405,12 +394,10 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 ### Code References
 Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.
 <br>
-Other resources used as reference for the implementation:<br>
-
 
 ### Use of AI
 #### Code Generation
-The GitHub Copilot extension was installed in our local versions of Visual Studio Code. We were therefore able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. Suggestions needed to be reviewed before they were included, as occassionally code may refer to
+The GitHub Copilot extension was installed in our local versions of Visual Studio Code. <br>We were therefore able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. <br>Suggestions needed to be reviewed before they were included, as occassionally code may refer to different features than the ones intended.
 
 #### Debugging
 Copilot was regularly used for debugging code using the inline editor. When using Chrome DevTools to inspect the preview or deployed pages.
@@ -429,6 +416,6 @@ On the whole, it has been useful to pair programme with Copilot and use it for d
 
 ### Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
-Code Institute tutors (Dillon, Mark and Roo) for answering our questions
+Code Institute tutors (Dillon, Mark and Roo) and Bootcamp Coding Coaches for answering my questions
 
 [Back to top](#top)
