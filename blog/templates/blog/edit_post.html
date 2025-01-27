@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -7,7 +8,20 @@
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form|crispy }}
-        <button type="submit" class="btn btn-primary">Save Changes</button>
+        {% if post.featured_image %}
+        <div class="mb-3">
+            <div>
+                <a href="{{ post.featured_image.url }}" target="_blank">
+                    <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" style="max-width: 200px;">
+                </a>
+            </div>
+        </div>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Update Post</button>
     </form>
 </div>
+{% endblock %}
+
+{% block extras %}
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
