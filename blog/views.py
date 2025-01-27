@@ -154,3 +154,30 @@ def search(request):
     query = request.GET.get('q')
     results = Post.objects.filter(title__icontains=query, status=1) if query else None
     return render(request, 'blog/search_results.html', {'query': query, 'results': results})
+
+def test_successful_comment_submission(self):
+        """Test for posting a comment on a post"""
+        self.client.login(
+            username="myUsername", password="myPassword")
+        post_data = {
+            'body': 'This is a test comment.'
+        }
+        response = self.client.post(reverse(
+            'post_detail', args=['blog']), post_data)
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(
+            b'Comment submitted and awaiting approval',
+            response.content
+        )
+
+def test_successful_collaboration_request_submission(self):
+    """Test for a user requesting a collaboration"""
+    post_data = {
+        'name': 'test name',
+        'email': 'test@email.com',
+        'message': 'test message'
+    }
+    response = self.client.post(reverse('about'), post_data)
+    self.assertEqual(response.status_code, 200)
+    self.assertIn(
+        b'Collaboration request received! I endeavour to respond within 2 working days.', response.content)
