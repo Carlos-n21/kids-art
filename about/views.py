@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import About
 from .forms import CollaborateForm
@@ -6,7 +6,7 @@ from .forms import CollaborateForm
 # Create your views here.
 
 
-def about_me(request):
+def about(request):
     """
     Renders the About page
     """
@@ -16,6 +16,7 @@ def about_me(request):
         if collaborate_form.is_valid():
             collaborate_form.save()
             messages.add_message(request, messages.SUCCESS, "Collaboration request received! I endeavour to respond within 2 working days.")
+            return redirect('collaborate_success')  # Redirect to a success page
 
     about = About.objects.all().order_by('-updated_on').first()
     collaborate_form = CollaborateForm()
@@ -28,3 +29,6 @@ def about_me(request):
             "collaborate_form": collaborate_form
         },
     )
+
+def collaborate_success(request):
+    return render(request, 'about/collaborate_success.html')
