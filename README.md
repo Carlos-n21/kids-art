@@ -193,6 +193,7 @@ Almost all of the website content is reponsive to different screen sizes that di
 ![Static Badge](https://img.shields.io/badge/GitHub-RepoHosting-black)
 ![Static Badge](https://img.shields.io/badge/Gitpod-IDE-yellow)
 ![Static Badge](https://img.shields.io/badge/logo-javascript-blue?logo=javascript)
+![Static Badge](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 
 ### Libraries
 ![Static Badge](https://img.shields.io/badge/Bootstrap-5.3-purple)
@@ -209,6 +210,9 @@ Almost all of the website content is reponsive to different screen sizes that di
 ### Frameworks
 ![Static Badge](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
 ![Static Badge](images_readme/cloudinary-squareLogo.webp)
+
+### DataBases
+![Static Badge](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
 
 [Back to top](#top)
