@@ -285,6 +285,8 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
 
 
 ### Test Results Summary
+Testing done following LMS from CI testing and adapted with Copilot.
+Below are results compiled by Copilot for brief explanation, that would allow also Junior Developers to understand them.
 <details>
 
 ### 1. Test for Rendering the About Page with Collaboration Form
@@ -394,6 +396,7 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
 - Comments update function on posts not working well, able to show updated comment but not deleting comment that was edited.
 - When creating a new post, only able to publish and not safe as draft at the momment, site crashing, tried to debug, but unable to fix by the time of subimssion.
 - "Currently" (image) on "Edit Post" page not showing link or image. Image showing under content. Was able to get this working once, but did not saved it, and was not able to get it to work again. Image still shows at the bottom, before update but extra field looks to be part of crispy forms and was not able to make it work.
+- HTML validation for Register (signup page) showing errors that I tried to search on VS-Code and Gitpod but unable to find files to change/correct the code.
 
 
 [Back to top](#top)
