@@ -1,4 +1,4 @@
-# Kids-Art (Capstone Project) <a id="top"/>
+# Kids-Art  <a id="top"/>
 <img src="images_readme/logo-no-background.png" style="heigth: 200px; width: 200px"><br>
 
 
