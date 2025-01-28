@@ -76,14 +76,12 @@ Here are all the user stories that have been prioritised (all must have and some
 | Homepage                                        | must have                 |   Done  |
 
 
-All user stories were logged on the [GitHub Project Board](https://github.com/users/Carlos-n21/projects/16) on GitHub repo, .
-
-As well as .
+All user stories were logged on the [GitHub Project Board](https://github.com/users/Carlos-n21/projects/16) on GitHub repo.
 
 [Back to top](#top)
 
 ### Wireframes
-Initial layout of website:
+Layout of website:
 
 - Mobile view:<br>
   <img src="images_readme/mobile-view1.png">
