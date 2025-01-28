@@ -83,7 +83,7 @@ Here are all the user stories that have been prioritised (all must have and some
 | Login Page                                      | must have                 |  Done        |
 | Registration Page                               | must have                 |  Done        |
 | User Profile                                    | must have                 |  Done        |
-| Comment posts                                   | should have               |  Done        |
+| Comment posts                                   | should have               |  In Progress |
 | Navbar Update for Logged-in Users               | must have                 |  Done        |
 | Admin Review/Moderation                         | could have                |  Done        |
 | Responsive Design                               | must have                 |  Done        |
