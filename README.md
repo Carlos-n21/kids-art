@@ -1,10 +1,12 @@
 # Kids-Art (Capstone Project) <a id="top"/>
-<img src="images_readme/logo-color-medium-2.jpg" style="heigth: 200px; width: 200px"><br>
-Kids-Art | Celebrating your kids artwork
+<img src="images_readme/logo-no-background.png" style="heigth: 200px; width: 200px"><br>
+
 
 
 ## Introduction
-The "Kids-Art" has been designed and implemented the final project for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.<br>
+
+The "Kids-Art" has been designed and implemented the final project for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.
+
 Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd75b696a.herokuapp.com/)
 
 ## Table of Contents
@@ -173,18 +175,24 @@ Almost all of the website content is reponsive to different screen sizes that di
 ![Static Badge](https://img.shields.io/badge/CSS3-Language-blue)
 ![Static Badge](https://img.shields.io/badge/GitHub-RepoHosting-black)
 ![Static Badge](https://img.shields.io/badge/Gitpod-IDE-yellow)
+![Static Badge](https://img.shields.io/badge/logo-javascript-blue?logo=javascript)
 
 ### Libraries
 ![Static Badge](https://img.shields.io/badge/Bootstrap-5.3-purple)
 ![Static Badge](https://img.shields.io/badge/FontAwesome-icons-navy)
 ![Static Badge](https://img.shields.io/badge/GoogleFonts-Typography-blue)
+![Static Badge](images_readme/pillow-badge.svg)
 
 ### Tools and Programs
-![Static Badge](https://img.shields.io/badge/LogoAI-LogoGenerator-red)
 ![Static Badge](https://img.shields.io/badge/Favicon.io-icons-navy)
 ![Static Badge](https://img.shields.io/badge/Balsamiq-Wireframes-green)
 ![Static Badge](https://img.shields.io/badge/MSCopilot-AI-orange)
 ![Static Badge](https://img.shields.io/badge/GitHubCopilot-AI-orange)
+
+### Frameworks
+![Static Badge](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)
+![Static Badge](images_readme/cloudinary-squareLogo.webp)
+
 
 [Back to top](#top)
 
@@ -197,6 +205,7 @@ Deployment steps are as follows, after account setup:
 
 Select New in the top-right corner of your Heroku Dashboard, and select Create new app from the dropdown menu.
 Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select Create App.
+<details>
 From the new app Settings, click Reveal Config Vars, and set your environment variables.
 | Key | Value |
 | --- | --- |
@@ -235,7 +244,7 @@ Set the remote for Heroku: heroku git:remote -a app_name (replace app_name with 
 After performing the standard Git add, commit, and push to GitHub, you can now type:
 git push heroku main
 The project should now be connected and deployed to Heroku!
- 
+</details>
 Once the MVP was achieved and tested on Gitpod, the deployment was done on Heroku.
 
 [Back to top](#top)
@@ -244,7 +253,7 @@ Once the MVP was achieved and tested on Gitpod, the deployment was done on Herok
 Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ### HTML Validation
-- Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed. No errors found after fixing.
+Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) to test the HTML on all webpages and updated as needed. No errors found after fixing.
 <details>
   <img src="images_readme/HTML-homepage-check.png">
   <img src="images_readme/HTML-about-check.png">
@@ -258,13 +267,14 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ### CSS Validation
 
-- Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
+Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) to test CSS style and no errors found.
+
   <img src="images_readme/CSS-validation.png">
 
 
 ### Lighthouse Audit
 
-- Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility.<br>
+Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility.<br>
 <details>
   <img src="images_readme/lighthouse-home.png">
   <img src="images_readme/lighthouse-about.png">
@@ -392,30 +402,39 @@ Validation of HTML/CSS, Lighthouse Audits, Bugs
 
 ## Credits
 ### Code References
-Many of the features were based on/inspired by examples in the [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) on the use of HTML, CSS and Javascript.
+Website was inspired on the "Blog" walkthrough project by [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) using HTML, CSS, Javascript, Django, Python and other extra tools to allow the user to be able to login into the page without having to use the admin panel.
 <br>
 
 ### Use of AI
 #### Code Generation
-The GitHub Copilot extension was installed in our local versions of Visual Studio Code. <br>We were therefore able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. <br>Suggestions needed to be reviewed before they were included, as occassionally code may refer to different features than the ones intended.
+The GitHub Copilot extension was installed in my local version of Visual Studio Code. <br>
+I was able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. <br>
+Had to review suggestions before they were included, as AI can generate code that can refer to different features than the ones intended.
+In this project, Copilot helped with the user account code and different pages creation for this to work as well as in the adaptation of the "Blog" project to the intended site.
 
 #### Debugging
-Copilot was regularly used for debugging code using the inline editor. When using Chrome DevTools to inspect the preview or deployed pages.
+Regularly uesd Copilot for debugging code using the inline editor and also prompting to on VS-Code side chat to request changes to the site and content for the site, as in the About section, that was changed from original project from Code Institute, to meet the needs of my view for the site. 
 
 #### Code Optimisation
-When coding more complicated logical constructs, e.g. a complex iteration to loop through an array to generate innerHTML elements in a Bootstrap grid, the basic structure of the grid without the loop was assigned to the innerHTML of the target element. Once tested to run correctly, Copilot was prompted to optimise on the code. It suggested using a map method to loop through the options array to build the HTML for each element, and join them all together as a string. Again, this needed to be tested fully before it was incorporated into the code. Running the resultant code produces the same result as before. 
+When needing to make more complicated changes to code or part of a page, Copilot was used to help fixing them and these were generally tested before pushing to repo, although, there was one feature where this did not happen by my mistake and unable to check at which point it stopped working well - update comment and current image that are described on bugs/errors to be fixed.
+Though this did finished well, it was a great experience to work with AI in this project.
+VS-Code with copilot also showed me different libraries that where needed for the site to work well, like Pillow libraries from Python, to allow the site to show images uploaded by the user to Cloudinary, as the original project was a written blog with small images next to the title and this was meant to be a different post with images, which was adapted to for the website purposes. 
 
 #### Impact on Workflow
-On the whole, it has been useful to pair programme with Copilot and use it for debugging and testing as we code. Due to the tight timescale of the hackathon, the team tried to use AI wherever possible to reduce development time, from creating user stories to suggesting commit messages. It was also able to explain selected code written by other team members with a concise and accurate summary. Occassionally it can be annoying when Copilot suggests code in ghost text unnecessarily, or introduces additional closing tags or brackets unnecessarily. Nonetheless, when used with specific prompts and context, some of the results provided by Copilot have been mostly usable, thus speeding up development. 
+Overall It was useful to work with Copilot and have help to build many parts of the site.
+Also debug and test the code.
+Copilot and other AI as Claude in different ways, have explained the different steps involved in the coding, why some code is better than another.
+Sometimes it can be furstrating to get some suggestions with ghost code that is not needed for the page to work well or changing different pages/files instead of only 1 ir 2 lines of code to fix a bug, but with testing, errors can be fixed.
+Generally, adapting the prompts to make the request specific and concise can help Copilot to give better suggestions to get new features and to improve the site.
 
 ### Content References
 
-
 ### Media References
 [LOGO.com](https://logo.com/) Used to make the website logo<br>
+[Art-K.co.uk](https://www.art-k.co.uk/) Used as an inspiration for the site.
 
 ### Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
-Code Institute tutors (Dillon, Mark and Roo) and Bootcamp Coding Coaches for answering my questions
+Code Institute tutors and Bootcamp Coding Coaches for helping my queries.
 
 [Back to top](#top)
