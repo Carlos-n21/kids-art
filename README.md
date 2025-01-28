@@ -5,7 +5,7 @@
 
 ## Introduction
 
-The "Kids-Art" has been designed and implemented the final project for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.
+The "Kids-Art" has been designed and implemented as the final project for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.
 
 Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd75b696a.herokuapp.com/)
 
@@ -31,12 +31,18 @@ Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd
 - [Technologies Used](#technologies-used)
 - [Deployment](#deployment)
 - [Testing](#testing)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [Lighthouse Audit](#lighthouse-audit)
+    - [Tests Results Summary](#test-results-summary)
+    - [ERD](#erd)
+    - [Bugs to fix](#bugs-to-fix)
 - [Credits](#credits)
-    - [Code References](code-references)
-    - [Use of AI](use-of-ai)
-    - [Content References](content-references)
-    - [Media References](media-references)
-    - [Acknowledgements](acknowledgements)
+    - [Code References](#code-references)
+    - [Use of AI](#use-of-ai)
+    - [Media References](#media-references)
+    - [Acknowledgements](#acknowledgements)
+    - [Owner Details](#owner-details)
 
 [Back to top](#top)
 
@@ -61,22 +67,35 @@ Persona 3: The Supportive Grandparent
 Name: Robert Miller <br>Age: 68 <br>Occupation: Retired Teacher <br>Interests: Reading, woodworking, spending time with grandchildren <br>About: Robert is a proud grandfather who cherishes his grandchildren's creative expressions. He enjoys logging in to the website to see their latest masterpieces and leave encouraging comments. Robert also appreciates connecting with other grandparents and sharing stories about their grandkids' artistic journeys.
 
 
-
 ## Project Plan
-This project was planned on the first 2 days, with wireframes, colours, fonts being searched.<br>
+This project was planned on the first 4 days, with wireframes, colours, fonts being searched.<br>
+Original idea for the website
 Copilot was used to get user stories, personas, and throughout the overall site building.<br>
 Adjustments were made the the content provided by Copilot as necessary and after testing the site.<br>
 There were some elements of the webiste that were accomplished and some points that use different technologies form the ones studied during the course and would possibly take a very long time to be put in plase, thus not being viable to be incorporated by the submission date.
 
-
 ### User Stories
 Here are all the user stories that have been prioritised (all must have and some should have ones) for the current implementation of the site:
-| User Stories                                    | MoSCoW priority           |  Status |
-| ----------------------------------------------- |:-------------------------:| -------:|
-| Homepage                                        | must have                 |   Done  |
+| User Stories                                    | MoSCoW priority           |  Status      |
+| ----------------------------------------------- |:-------------------------:| ------------:|
+| Homepage                                        | must have                 |  Done        |
+| About Page                                      | must have                 |  Done        |
+| Login Page                                      | must have                 |  Done        |
+| Registration Page                               | must have                 |  Done        |
+| User Profile                                    | must have                 |  Done        |
+| Comment posts                                   | should have               |  Done        |
+| Navbar Update for Logged-in Users               | must have                 |  Done        |
+| Admin Review/Moderation                         | could have                |  Done        |
+| Responsive Design                               | must have                 |  Done        |
+| Add more admins                                 | should have               |  Done        |
+| Create albums                                   | could have                |  Not Done    |
+| Like posts                                      | could have                |  Not Done    |
+| Saving drafts                                   | should have               |  In progress |
+| Create albums                                   | could have                |  Not Done    |
+| Like posts                                      | could have                |  Not Done    |
 
 
-All user stories were logged on the [GitHub Project Board](https://github.com/users/Carlos-n21/projects/16) on GitHub repo.
+All user stories were logged on the [GitHub Project Board](https://github.com/users/Carlos-n21/projects/16/views/1) on GitHub repo.
 
 [Back to top](#top)
 
@@ -392,7 +411,7 @@ Below are results compiled by Copilot for brief explanation, that would allow al
   <img src="images_readme/ERD-form.png">
 
 
-### Bugs yet to be Fixed
+### Bugs to fix
 - Comments update function on posts not working well, able to show updated comment but not deleting comment that was edited.
 - When creating a new post, only able to publish and not safe as draft at the momment, site crashing, tried to debug, but unable to fix by the time of subimssion.
 - "Currently" (image) on "Edit Post" page not showing link or image. Image showing under content. Was able to get this working once, but did not saved it, and was not able to get it to work again. Image still shows at the bottom, before update but extra field looks to be part of crispy forms and was not able to make it work.
@@ -406,7 +425,7 @@ Below are results compiled by Copilot for brief explanation, that would allow al
 Website was inspired on the "Blog" walkthrough project by [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) using HTML, CSS, Javascript, Django, Python and other extra tools to allow the user to be able to login into the page without having to use the admin panel.
 <br>
 
-### Use of AI
+## Use of AI
 #### Code Generation
 The GitHub Copilot extension was installed in my local version of Visual Studio Code. <br>
 I was able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. <br>
@@ -428,8 +447,6 @@ Copilot and other AI as Claude in different ways, have explained the different s
 Sometimes it can be furstrating to get some suggestions with ghost code that is not needed for the page to work well or changing different pages/files instead of only 1 ir 2 lines of code to fix a bug, but with testing, errors can be fixed.
 Generally, adapting the prompts to make the request specific and concise can help Copilot to give better suggestions to get new features and to improve the site.
 
-### Content References
-
 ### Media References
 [LOGO.com](https://logo.com/) Used to make the website logo<br>
 [Art-K.co.uk](https://www.art-k.co.uk/) Used as an inspiration for the site.
@@ -437,5 +454,9 @@ Generally, adapting the prompts to make the request specific and concise can hel
 ### Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
 Code Institute tutors and Bootcamp Coding Coaches for helping my queries.
+
+### Owner Details
+This website was adapted by Carlos Neves, student of Code Institute.<br>
+[LinkedIn](https://www.linkedin.com/in/c-neves/)
 
 [Back to top](#top)
