@@ -17,26 +17,30 @@ class PostList(generic.ListView):
 
 
 def post_detail(request, slug):
-    """
-    Display an individual :model:`blog.Post`.
-    """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
 
     if request.method == "POST":
-        comment_form = CommentForm(data=request.POST)
+        comment_id = request.POST.get("comment_id")  # 👈 Get comment ID if it's an update
+
+        if comment_id:
+            # Updating existing comment
+            comment_instance = get_object_or_404(Comment, id=comment_id, author=request.user)
+            comment_form = CommentForm(data=request.POST, instance=comment_instance)
+        else:
+            # Creating new comment
+            comment_form = CommentForm(data=request.POST)
+
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.author = request.user
             comment.post = post
-            comment.approved = True  # Automatically approve the comment
+            comment.approved = True
             comment.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Comment submitted successfully'
-            )
+
+            messages.add_message(request, messages.SUCCESS, 'Comment submitted successfully')
             return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     else:
         comment_form = CommentForm()
@@ -50,6 +54,7 @@ def post_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+
 
 
 def comment_edit(request, slug, comment_id):

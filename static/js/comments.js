@@ -23,12 +23,16 @@ const commentSection = document.getElementById("comment-section");
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     let commentId = e.target.getAttribute("comment_id");
-    let commentContent = document.getElementById(`comment${commentId}`).innerText;
+    let commentContent = document.getElementById(`comment${commentId}`).innerText.trim();
+
     commentText.value = commentContent;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `/post/${postSlug}/edit_comment/${commentId}/`);
+
+    // Set hidden input value
+    document.getElementById("commentIdInput").value = commentId;
   });
 }
+
 
 /**
 * Initializes deletion functionality for the provided delete buttons.
