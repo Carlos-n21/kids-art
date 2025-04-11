@@ -36,6 +36,12 @@ body {
     background-color: transparent;
 }
 
+/* Ensure all post images have the same dimensions */
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
+}
+
 .image-container {
     position: relative;
 }

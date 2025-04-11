@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+
+CLOUDINARY_STORAGE = {
+    'CLOUDINARY_URL': os.environ.get('os.environ["CLOUDINARY_URL"] = "cloudinary://998528459467398:nhmF2jojIeVyrzYvbeDYlebDmJE@dm4ml7guk"'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 import sys
 import dj_database_url
 if os.path.isfile('env.py'):
@@ -32,7 +39,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-carlosn21-kidsart-mhki6cilulh.ws.codeinstitute-ide.net', '.herokuapp.com', '127.0.0.1', 'localhost', 'kids-art-03ecd75b696a.herokuapp.com']
 
@@ -98,16 +105,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'codestar.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))

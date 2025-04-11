@@ -19,15 +19,6 @@ class PostList(generic.ListView):
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
-
-    **Context**
-
-    ``post``
-        An instance of :model:`blog.Post`.
-
-    **Template:**
-
-    :template:`blog/post_detail.html`
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
@@ -40,10 +31,11 @@ def post_detail(request, slug):
             comment = comment_form.save(commit=False)
             comment.author = request.user
             comment.post = post
+            comment.approved = True  # Automatically approve the comment
             comment.save()
             messages.add_message(
                 request, messages.SUCCESS,
-                'Comment submitted and awaiting approval'
+                'Comment submitted successfully'
             )
             return HttpResponseRedirect(reverse('post_detail', args=[slug]))
     else:
@@ -62,10 +54,9 @@ def post_detail(request, slug):
 
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    View to edit comments
     """
     if request.method == "POST":
-
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comment = get_object_or_404(Comment, pk=comment_id)
@@ -74,8 +65,7 @@ def comment_edit(request, slug, comment_id):
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
             comment.post = post
-            comment.approved = False
-            comment.save()
+            comment.save()  # No need to reset approval status
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
             messages.add_message(request, messages.ERROR, 'Error updating comment!')
