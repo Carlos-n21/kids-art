@@ -13,7 +13,7 @@ from django.core.paginator import Paginator
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)
     template_name = "blog/index.html"
-    paginate_by = 6
+    paginate_by = 8  # Show 8 posts per page
 
 
 def post_detail(request, slug):
@@ -127,7 +127,7 @@ def delete_post(request, slug):
 @login_required
 def profile(request):
     user_posts = Post.objects.filter(author=request.user, status=1).order_by('-created_on')
-    paginator = Paginator(user_posts, 6)  # Show 6 posts per page
+    paginator = Paginator(user_posts, 8)  # Show 6 posts per page
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'blog/profile.html', {'posts': page_obj, 'is_paginated': page_obj.has_other_pages()})
