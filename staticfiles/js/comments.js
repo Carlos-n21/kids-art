@@ -7,6 +7,9 @@ const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");
 
+const commentSection = document.getElementById("comment-section");
+
+
 /**
 * Initializes edit functionality for the provided edit buttons.
 * 
@@ -20,12 +23,16 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     let commentId = e.target.getAttribute("comment_id");
-    let commentContent = document.getElementById(`comment${commentId}`).innerText;
+    let commentContent = document.getElementById(`comment${commentId}`).innerText.trim();
+
     commentText.value = commentContent;
     submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `/post/${postSlug}/edit_comment/${commentId}/`);
+
+    // Set hidden input value
+    document.getElementById("commentIdInput").value = commentId;
   });
 }
+
 
 /**
 * Initializes deletion functionality for the provided delete buttons.

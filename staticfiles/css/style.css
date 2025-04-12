@@ -36,6 +36,12 @@ body {
     background-color: transparent;
 }
 
+/* Ensure all post images have the same dimensions */
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
+}
+
 .image-container {
     position: relative;
 }
@@ -168,5 +174,14 @@ body {
     transform: translate(-50%, -50%);
     max-width: 18%; /* Adjust the size of the logo as needed */
     height: auto;
+}
+
+.post-detail-image {
+    width: 100%; /* Make the image take up the full width of its container */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 70vh; /* Limit the height to 70% of the viewport height */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
