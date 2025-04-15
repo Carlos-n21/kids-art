@@ -36,7 +36,6 @@ Live site: [Kids-Art](https://kids-art-03ecd75b696a.herokuapp.com/)
     - [Skeleton & Surface Planes](#skeleton--surface-planes)
       - [Wireframes](#wireframes)
       - [Imagery](#imagery)
-- [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
     - [Languages and Technologies](#languages-and-technologies)
     - [Libraries](#libraries)
@@ -59,6 +58,7 @@ Live site: [Kids-Art](https://kids-art-03ecd75b696a.herokuapp.com/)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
     - [Lighthouse Audit](#lighthouse-audit)
+- [Future Features](#future-features)
 - [Credits](#credits)
     - [Code References](#code-references)
     - [Media References](#media-references)
@@ -275,11 +275,6 @@ Logo Image<br>
   <img src="images_readme/logo-no-background.png" style="heigth: 200px; width: 200px"><br>
   
 [Back to top](#top)
-
-## Future Features
-- Add likes to posts.
-- Share posts on social media.
-- Create albums with the posts created
 
 ## Technologies Used
 ### Languages and Technologies
@@ -515,6 +510,11 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
   <img src="images_readme/lighthouse-newpost.png">
   <img src="images_readme\lighthouse-post-detail.png">
 </details>
+
+## Future Features
+- Add likes to posts.
+- Share posts on social media.
+- Create albums with the posts created
 
 ## Credits
 ### Code References
