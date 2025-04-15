@@ -9,7 +9,16 @@ class TestAboutView(TestCase):
     def setUp(self):
         """Creates about me content"""
         self.about_content = About(
-            title="About Kids-Art", content="Welcome to Kids-Art, a delightful digital gallery where your child's creativity comes to life! At Kids-Art, we believe that every piece of art tells a unique story, and we're here to celebrate the boundless imagination of young artists everywhere.")
+            title="About Kids-Art",
+            content=(
+                "Welcome to Kids-Art, a delightful digital gallery where your "
+                "child's creativity comes to life! At Kids-Art, we "
+                "believe that "
+                "every piece of art tells a unique story, and we're here to "
+                "celebrate the boundless imagination of young artists "
+                "everywhere."
+            )
+        )
         self.about_content.save()
 
     def test_render_about_page_with_collaborate_form(self):
@@ -20,7 +29,9 @@ class TestAboutView(TestCase):
         self.assertIn(b'Welcome to Kids-Art', response.content)
         self.assertIn(b'Our Mission', response.content)
         self.assertIn(b'How It Works', response.content)
-        self.assertIsInstance(response.context['collaborate_form'], CollaborateForm)
+        self.assertIsInstance(
+            response.context['collaborate_form'], CollaborateForm
+        )
 
     def test_submit_collaborate_form(self):
         """Verifies form submission for collaboration"""
@@ -30,5 +41,5 @@ class TestAboutView(TestCase):
             'message': 'I would like to collaborate.'
         }
         response = self.client.post(reverse('about'), data=form_data)
-        self.assertEqual(response.status_code, 302)  # Assuming a redirect on successful form submission
+        self.assertEqual(response.status_code, 302)  # Assuming a redirect
         # Add more assertions as needed to verify form processing

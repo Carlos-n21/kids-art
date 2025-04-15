@@ -58,6 +58,7 @@ Live site: [Kids-Art](https://kids-art-03ecd75b696a.herokuapp.com/)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
     - [Lighthouse Audit](#lighthouse-audit)
+    - [Python Tests](#python-tests)
 - [Future Features](#future-features)
 - [Credits](#credits)
     - [Code References](#code-references)
@@ -510,6 +511,21 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
   <img src="images_readme/lighthouse-newpost.png">
   <img src="images_readme\lighthouse-post-detail.png">
 </details>
+
+### Python Tests
+Python tests were done on VS-Code, as can be seen in the image below:
+
+<img src="images_readme\python-testing.png">
+
+Also checked Python using [CI Python Linter](https://pep8ci.herokuapp.com/#), with no errors, as can be seen on the example below.
+
+<img src="images_readme\CI-Python-Linter-2.png">
+
+The pages checked were:
+ - [about\test_forms.py](about\test_forms.py)
+ - [about\test_views.py](about\test_views.py)
+ - [blog\test_forms.py](blog\test_forms.py)
+ - [blog\test_views.py](blog\test_views.py) 
 
 ## Future Features
 - Add likes to posts.
