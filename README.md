@@ -1,16 +1,21 @@
 # Kids-Art  <a id="top"/>
-<img src="images_readme/logo-no-background.png" style="heigth: 200px; width: 200px"><br>
-
-
+<img src="images_readme/am-i-responsive.png">
 
 ## Introduction
 
-The "Kids-Art" has been designed and implemented as the final project for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.
+The "Kids-Art" has been designed and implemented as the final project for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.<br>
+This project was envisioned as a way for parents to share their kids artwrok with their relatives, and later also thought that it could be extended to other people to see different artwork from kids around the world.<br>
+
+Main objective is to showcase the use of DJango, Database management, and CRUD functionality.<br>
 
 Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd75b696a.herokuapp.com/)
 
 ## Table of Contents
-- [User Experience Design](#user-experience-design)
+- [Kids-Art](#kids-art)
+    - [Introduction](#introduction)
+    - [Table of Contents](#table-of-contents)
+    - [Overview](#overview)
+- [User Experience](#ux---user-experience)
 - [Project Brief](#project-brief)
 - [Users](#users)
 - [Project Plan](#project-plan)
@@ -46,15 +51,83 @@ Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd
 
 [Back to top](#top)
 
-## User Experience Design
-For the develpmment of this site, I tried as mocuh as possible to follow user-centred approach throughout the inception and design of this site.<br>
-Focusing the features in the user needs and their expectations.
+# Overview
+Kids-Art is a simple, minimalist website with paintings from kids, with the need to register to create new posts and leave comments on other users posts.<br>
+It's meant to be an interactive, responsive site.
 
-### Project Brief
-The project goal is to provide a platform for users to share the artwork made by their children, the user can also post art from younger people in their family.
+ - Users have direct access to posts on the homepage
+ - Possibility to create posts after registering on the site
+ - Ability to edit or remove posts contents if logged in
+ - Comment on posts after log in
+ - Feature to contact page admin and be a collaborator
+ - About page, explaining how the site works
 
-The site user's goals are to to have access to the site to view their posts and other users posts also. Be able to create, update and delete their posts.
-Leave comments on other users posts and share the site with family and friends intereted in seeing different artworks.
+The site is responsive in different screen sizes and accessible in different web browsers, to ensure a smooth experience on different devices.<br>
+Kids-Art mais goal is to create a community to share your kids artwork but also to share their simplicity, watch it improve and share happiness while seeing different posts on the site.
+
+## UX - User Experience
+<img src="images_readme\logo-no-background.png" style="height: 200px; width: 200px;">
+
+The layout for this website was inspired in other websites with activities for kids but not showing their artwork. More directed to present and explain playfull activities for parents or other users to do with kids.<br>
+
+So I fought about doing a blog initially, but then, came the idea of making it available for other people to also use the site.<br>
+
+The name "Kids-Art" came for simplicity, to mix the 2 main goals of the site: "kids" and "art", also needing to search for other sites, that as far, as researched don't have the same name.<br>
+
+The "splash" can be found in kids clothes when they pain, can also be a bit of paint they trow to the canvas or a simple paint droplet as result of playful moments with relatives or freinds.<br>
+
+The short "motto" enhances what the site is about.<br>
+
+## Colour Scheme
+For Kids-Art, I tried to select colors that create a high contrast for easier readability, with light colors to keep the site simple and open to everyone.
+
+ - #000080 - Navy blue
+ - #CAF2FF - Water
+ - #FFFFFF - White
+ - #000000 - Black
+ - #0074D9 - True Blue
+
+<img src="images_readme/Colour-palette.png">
+
+## Contrast check <br>
+  <img src="images_readme/contrast-check-navy-light-blue.png"> 
+  <img src="images_readme/contrast-check-white-black.png">
+
+
+## Typography
+Initial website font-family was Roboto and Lato.
+
+  - [Roboto](https://fonts.google.com/specimen/Roboto)
+  - [Lato](https://fonts.google.com/?query=Lato)
+
+For the website logo and title, used Caveat Brush and Open Sans, as per bellow images:
+  <img src="images_readme/Caveat-brush.png"> 
+  <img src="images_readme/open-sans.png">
+
+# Project Planning
+The main goal for this project was to create a fun and simple website, easy to use and accessible in different devices.
+
+## Strategy Plane
+
+  - User-friendly platform to post artwork
+  - Appealing and minimalistic layout and colors
+  - Show simple and easy to select menus
+  - Provide an intuitive UI for efficient CRUD functionality related to posts creation and comments
+  - Ensure consistent UX thoughout multiple platforms, as mobile devices, tablets, and desktops
+  - Develop a platform that can be improved with new features in the future
+
+All the above, aiming to create a seamless experience for the user, where memories can be saved and hopefully talent can be shown.
+
+## Agile Methodologies
+Kids-Art was my third project, and the second individual one, with our facilitator and coaches motivating us to showcase our abilities, from the initial idea, to planning the website, think about the essential features for the MVP and others that could be added later, if not working on time for project submission.
+
+We were reminded to try to add small parts and test them before commiting the changes and them ppushing them to the main repo.
+
+The main features can be seen on the [GitHub Project Board](https://github.com/users/Carlos-n21/projects/16/views/1).
+
+With each iteration of the Agile methogologies, the website was improved and I did my best to improve my skills and knowledge of the project management, which I had used in previous projects, but that can always be improved.
+
+These will also be very important for future projects, either personal or professional, with Hackathons being a great way to also get more practice with Agile methodologies.
 
 ### Users
 Persona 1: The Proud Parent<br>
@@ -66,15 +139,17 @@ Name: Emily Harris <br>Age: 11 <br>Occupation: Student <br>Interests: Drawing, p
 Persona 3: The Supportive Grandparent
 Name: Robert Miller <br>Age: 68 <br>Occupation: Retired Teacher <br>Interests: Reading, woodworking, spending time with grandchildren <br>About: Robert is a proud grandfather who cherishes his grandchildren's creative expressions. He enjoys logging in to the website to see their latest masterpieces and leave encouraging comments. Robert also appreciates connecting with other grandparents and sharing stories about their grandkids' artistic journeys.
 
+## MoSCoW Prioritorization
 
-## Project Plan
-This project was planned on the first 4 days, with wireframes, colours, fonts being searched.<br>
-Original idea for the website
-Copilot was used to get user stories, personas, and throughout the overall site building.<br>
-Adjustments were made the the content provided by Copilot as necessary and after testing the site.<br>
-There were some elements of the webiste that were accomplished and some points that use different technologies form the ones studied during the course and would possibly take a very long time to be put in plase, thus not being viable to be incorporated by the submission date.
+I followed the MoSCoW Prioritization method for this project, identifying and labelling my:
 
-### User Stories
+  - Must Haves: the 'required', critical components of the project. Needed to reach the MVP (Minimum Viable Product) as early as possible, allowing me to develop the project further, if possible
+
+  - Should Haves: the components that add value to the project, but are not absolutely 'vital' in the MVP stage. The 'Must Haves' receive priority over the 'Should Haves'.
+
+  - Could Haves: features that are a 'bonus' to the project, that would be nice to have in this phase, but only if the most important issues have been completed first and time allows.
+
+## User Stories
 Here are all the user stories that have been prioritised (all must have and some should have ones) for the current implementation of the site:
 | User Stories                                    | MoSCoW priority           |  Status      |
 | ----------------------------------------------- |:-------------------------:| ------------:|
@@ -99,53 +174,28 @@ All user stories were logged on the [GitHub Project Board](https://github.com/us
 
 [Back to top](#top)
 
-### Wireframes
-Layout of website:
+## Scope Plane
+Kids-Art was the Individual Capstone Project for the Full Stack Bootcamp at Code Institute, it is designed to be a learning experience and a functional artwork sharing platform. <br>
 
-- Mobile view:<br>
-  <img src="images_readme/mobile-view1.png">
-  <img src="images_readme/mobile-view2.png">
-  <img src="images_readme/menu.png">
-   
-- Tablet view:<br>
-  <img src="images_readme/tablet-PC-view.png"> 
+This project uses technologies such as Django, SQL, Bootstrap, and Cloudinary for image handling.<br> 
 
-Only done 2 views for tablet view as view is the same for tablet and computer screens<br>
-Furhter images for other features on mobile view not included as the layout is the same for different screen sizes.
+Following Agile Planning Methodologies, User Stories and Developer Tasks were added as issues on the GitHub project board.
 
-[Back to top](#top)
+Essential features of this site include:
 
-## Design
-### Colour Scheme
-- Coulour Palette
-  <img src="images_readme/Colour-palette.png">
+  - A visually appealing, accessible website, meeting the user needs
+  - Responsive design for mobile, tablet, and desktop devices
+  - User Authentication and Registration
+  - Comment on posts with full CRUD functionality
+  - User Profile creation and editing
+  - Create posts with full CRUD function
+  - Basic search function for posts
 
-- Contrast check <br>
-  <img src="images_readme/contrast-check-navy-light-blue.png"> 
-  <img src="images_readme/contrast-check-white-black.png">
+## Structural Plane
+Kids-Art tries to be a simple and fun experience for users to share their stories through images with their families and friends.<br>Trying to provide a seamless experience.<br>
+Structurally, the website should provid a responsive design, ensuring  accessibility in different devices, and inludes a main page, about page, registration page, login page, profile page for logged in users with all the posts created by the user with option to update/change or delete them, post creation page, and an administrative page for content moderation, as/if needed.
 
-### Typography
-Initial website font-family was Roboto and Lato.
-
-For the website logo and title, used Caveat Brush and Open Sans, as per bellow images:
-  <img src="images_readme/Caveat-brush.png"> 
-  <img src="images_readme/open-sans.png">
-
-
-### Imagery
-Some of the original sites used to get images for ficticious posts on the website.
-
-  - [phhere.com](https://pxhere.com/en/photo/887571)
-  - [NPS](https://www.nps.gov/neri/learn/news/youth-arts-in-the-parks-2023-art-contest-near-deadline.htm)
-
-Hero Image
-  <img src="images_readme/painting-ideas.jpg">
-  
-
-[Back to top](#top)
-
-## Website Features
-### Homepage
+## Homepage
   <img src="images_readme/navbar.png">
   <img src="images_readme/navbar-registered-user.png">
   
@@ -162,23 +212,52 @@ The footer contains links to different social networks that the site admin could
 
 Have the number of pages on the bottom of the page allows the user, not just to move to the next or previous page, but also to go to a specific page, reducing the overload of content on one page and making it easier to access different pages quicker than just one at a time.
 
-### Profile
+## Profile
   <img src="images_readme/profile.png">
 
 Allows the user to see the post created, with option to edit them (in a different page) or to delete with a confirmation message.
 
-### Create Post
+## Create Post
   <img src="images_readme/new-post.png">
 
 The user can create a new post, after filling all the fields presented, except the Slug, that is automatically filled when filling the Title.
 
+# Skeleton & Surface Planes
+## Wireframes
+The wireframes for this website were created using Balsamiq Wireframes, which provide a visual idea of the project design concept.
+
+This software is user-friendly and an efficient tool to create web design mock-ups, with the option to select different device frame sizes.
+
+They are designed to provide a modular structure, that envisions what could be the layout of the website/app.
+
+Layout of website:
+
+- Mobile view:<br>
+  <img src="images_readme/mobile-view1.png">
+  <img src="images_readme/mobile-view2.png">
+  <img src="images_readme/menu.png">
+   
+- Tablet view:<br>
+  <img src="images_readme/tablet-PC-view.png"> 
+
+Only done 2 views for tablet view as view is the same for tablet and computer screens<br>
+Furhter images for other features on mobile view not included as the layout is the same for different screen sizes.
 
 [Back to top](#top)
 
-## Responsive Design
-Almost all of the website content is reponsive to different screen sizes that different devices might have, through the use of Bootstrap.<br>
+## Imagery
+Some of the original sites used to get images for ficticious posts on the website.
 
-  <img src="images_readme/am-i-responsive.png">
+  - [phhere.com](https://pxhere.com/en/photo/887571)
+  - [NPS](https://www.nps.gov/neri/learn/news/youth-arts-in-the-parks-2023-art-contest-near-deadline.htm)
+
+Hero Image
+  <img src="images_readme/painting-ideas.jpg">
+  
+Logo Image<br>
+  <img src="images_readme/logo-no-background.png" style="heigth: 200px; width: 200px"><br>
+  
+[Back to top](#top)
 
 ## Future Features
 - Add likes to posts.
@@ -284,7 +363,6 @@ Used [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input
   <img src="images_readme/HTML-edit-post-check.png">
   <img src="images_readme/HTML-create-post-check.png">
 </details>
-
 
 ### CSS Validation
 
