@@ -175,10 +175,10 @@ body {
 /* logo style */
 .overlay-image {
     position: absolute;
-    top: 60%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 10%; /* Adjust the size of the logo as needed */
+    max-width: 14%; /* Adjust the size of the logo as needed */
     height: auto;
 }
 
