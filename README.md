@@ -59,6 +59,7 @@ Live site: [Kids-Art](https://kids-art-03ecd75b696a.herokuapp.com/)
     - [CSS Validation](#css-validation)
     - [Lighthouse Audit](#lighthouse-audit)
     - [Python Tests](#python-tests)
+    - [JavaScript Test](#javascript-test)
 - [Future Features](#future-features)
 - [Credits](#credits)
     - [Code References](#code-references)
@@ -513,7 +514,7 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
 </details>
 
 ### Python Tests
-Python tests were done on VS-Code, as can be seen in the image below:
+Python tests were done on VS-Code, using command "python manage.py test --verbosity=1", as can be seen in the image below:
 
 <img src="images_readme\python-testing.png">
 
@@ -526,6 +527,14 @@ The pages checked were:
  - [about\test_views.py](about\test_views.py)
  - [blog\test_forms.py](blog\test_forms.py)
  - [blog\test_views.py](blog\test_views.py) 
+
+### JavaScript Test
+Javascript was tested on 2 pages below:
+ - [static\js\comments.js](static\js\comments.js)
+ - [static\js\script.js](static\js\script.js)
+
+On both pages, after fixing/updating the code, the result was no errors, as can be seen in the example below:
+<img src="images_readme\jsHint-1.png">
 
 ## Future Features
 - Add likes to posts.

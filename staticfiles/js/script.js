@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 console.log("Kids-Art: Celebrating your kids artwork");
 
 function slugify(text) {
