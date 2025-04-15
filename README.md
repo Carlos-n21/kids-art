@@ -56,6 +56,7 @@ Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd
 - [Bugs to fix](#bugs-to-fix)
 - [AI Implementation and Orchestration](#ai-implementaion-and-orchestration)
     - [Code Generation](#code-generation)
+    - [Debugging](#debugging)
     - [Code Optimization](#code-optimisation)
     - [Impact on Workflow](#impact-on-workflow)
 - [Credits](#credits)
