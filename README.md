@@ -4,6 +4,7 @@
 ## Introduction
 
 The "Kids-Art" has been designed and implemented as the final project for the Code Institute's 16-week AI-Augmented Full Stack Development Bootstrap course.<br>
+
 This project was envisioned as a way for parents to share their kids artwrok with their relatives, and later also thought that it could be extended to other people to see different artwork from kids around the world.<br>
 
 Main objective is to showcase the use of DJango, Database management, and CRUD functionality.<br>
@@ -47,11 +48,6 @@ Live site: [Kids-Art](https://kids-art-03ecd75b696a.herokuapp.com/)
     - [Heroku Deployment](#heroku-deployment)
     - [Clone Project](#clone-project)
     - [Fork Project](#fork-project)
-- [Testing](#testing)
-    - [HTML Validation](#html-validation)
-    - [CSS Validation](#css-validation)
-    - [Lighthouse Audit](#lighthouse-audit)
-    - [Test Results Summary](#test-results-summary)
 - [ERD](#erd)
 - [Bugs to fix](#bugs-to-fix)
 - [AI Implementation and Orchestration](#ai-implementaion-and-orchestration)
@@ -59,6 +55,10 @@ Live site: [Kids-Art](https://kids-art-03ecd75b696a.herokuapp.com/)
     - [Debugging](#debugging)
     - [Code Optimization](#code-optimisation)
     - [Impact on Workflow](#impact-on-workflow)
+- [Testing](#testing)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [Lighthouse Audit](#lighthouse-audit)
 - [Credits](#credits)
     - [Code References](#code-references)
     - [Media References](#media-references)
@@ -448,6 +448,39 @@ A copy of the original repository can be made through GitHub. Please follow the 
 
 [Back to top](#top)
 
+### ERD
+
+  <img src="images_readme/ERD-form.png">
+
+### Bugs to fix
+- When creating a new post, only able to publish and not safe as draft at the momment, site crashing, tried to debug, but unable to fix by the time of subimssion.
+- "Currently" (image) on "Edit Post" page not showing link or image. Image showing under content. Was able to get this working once, but did not saved it, and was not able to get it to work again. Image still shows at the bottom, before update but extra field looks to be part of crispy forms and was not able to make it work.
+- HTML validation for Register (signup page) showing errors that I tried to search on VS-Code and Gitpod but unable to find files to change/correct the code.
+
+[Back to top](#top)
+
+## AI Implementaion and Orchestration
+### Code Generation
+The GitHub Copilot extension was installed in my local version of Visual Studio Code. <br>
+I was able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. <br>
+Had to review suggestions before they were included, as AI can generate code that can refer to different features than the ones intended.<br>
+In this project, Copilot helped with the user account code and different pages creation for this to work as well as in the adaptation of the "Blog" project to the intended site.
+
+### Debugging
+Regularly uesd Copilot for debugging code using the inline editor and also prompting to on VS-Code side chat to request changes to the site and content for the site, as in the About section, that was changed from original project from Code Institute, to meet the needs of my view for the site. 
+
+### Code Optimisation
+When needing to make more complicated changes to code or part of a page, Copilot was used to help fixing them and these were generally tested before pushing to repo.<br>
+It was a great experience to work with AI in this project.<br>
+Using Copilot extension on VS-Code showed me different libraries that where needed for the site to work well, like Pillow libraries from Python, to allow the site to show images uploaded by the user to Cloudinary, as the original project was a written blog with small images next to the title and this was meant to be a different post with images, which was adapted to for the website purposes. 
+
+### Impact on Workflow
+Overall It was useful to work with Copilot and have help to build many parts of the site.<br>
+AI was also a good help to debug and test the code.<br>
+Copilot and other AI as Claude in different ways, have explained the different steps involved in the coding, why some code is better than another.<br>
+Sometimes it can be furstrating to get some suggestions with ghost code that is not needed for the page to work well or changing different pages/files instead of only 1 ir 2 lines of code to fix a bug, but with testing, errors can be fixed.<br>
+Generally, adapting the prompts to make the request specific and concise can help Copilot to give better suggestions to get new features and to improve the site.
+
 ## Testing
 Validation of HTML/CSS, Lighthouse Audits, Bugs
 
@@ -482,141 +515,6 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
   <img src="images_readme/lighthouse-newpost.png">
   <img src="images_readme\lighthouse-post-detail.png">
 </details>
-
-### Test Results Summary
-Testing done following LMS from CI testing and adapted with Copilot.
-Below are results compiled by Copilot for brief explanation, that would allow also Junior Developers to understand them.
-<details>
-
-### 1. Test for Rendering the About Page with Collaboration Form
-
-- **Test Name**: `test_render_about_page_with_collaborate_form`
-- **Description**: Verifies that the About page is rendered correctly and contains the expected content, including the collaboration form.
-- **Expected Outcome**:
-  - Status code is 200 (OK).
-  - Page content includes specific text: "About Kids-Art", "Welcome to Kids-Art", "Our Mission", "How It Works".
-  - Collaboration form is included in the context.
-
-### 2. Test for Submitting the Collaboration Form
-
-- **Test Name**: `test_submit_collaborate_form`
-- **Description**: Verifies that the collaboration form can be successfully submitted and processed.
-- **Expected Outcome**:
-  - Status code is 302 (redirect on successful form submission).
-
-### 3. Test for Rendering the Blog Post Detail Page with Comment Form
-
-- **Test Name**: `test_render_post_detail_page_with_comment_form`
-- **Description**: Verifies that the blog post detail page is rendered correctly and contains the comment form.
-- **Expected Outcome**:
-  - Status code is 200 (OK).
-  - Page content includes specific text: "Blog title", "Blog content".
-  - Comment form is included in the context.
-
-### 4. Test for Submitting a Comment on a Blog Post
-
-- **Test Name**: `test_successful_comment_submission`
-- **Description**: Verifies that a comment can be successfully submitted on a blog post.
-- **Expected Outcome**:
-  - Status code is 302 (redirect on successful comment submission).
-  - Comment is created and needs approval.
-
-### 5. Test for Required Name Field in Collaboration Form
-
-- **Test Name**: `test_name_is_required`
-- **Description**: Verifies that the name field is required in the collaboration form.
-- **Expected Outcome**:
-  - Form is invalid if the name field is empty.
-  - Error message is present for the name field.
-
-### 6. Test for Required Email Field in Collaboration Form
-
-- **Test Name**: `test_email_is_required`
-- **Description**: Verifies that the email field is required in the collaboration form.
-- **Expected Outcome**:
-  - Form is invalid if the email field is empty.
-  - Error message is present for the email field.
-
-### 7. Test for Required Message Field in Collaboration Form
-
-- **Test Name**: `test_message_is_required`
-- **Description**: Verifies that the message field is required in the collaboration form.
-- **Expected Outcome**:
-  - Form is invalid if the message field is empty.
-  - Error message is present for the message field.
-
-### 8. Test for Valid Collaboration Form
-
-- **Test Name**: `test_form_is_valid`
-- **Description**: Verifies that the collaboration form is valid when all required fields are provided.
-- **Expected Outcome**:
-  - Form is valid if all required fields are provided.
-
-### 9. Test for Rendering the Blog Post List Page
-
-- **Test Name**: `test_render_post_list_page`
-- **Description**: Verifies that the blog post list page is rendered correctly.
-- **Expected Outcome**:
-  - Status code is 200 (OK).
-  - Page content includes specific text related to blog posts.
-
-### 10. Test for Rendering the User Profile Page
-
-- **Test Name**: `test_render_profile_page`
-- **Description**: Verifies that the user profile page is rendered correctly.
-- **Expected Outcome**:
-  - Status code is 200 (OK).
-  - Page content includes specific text related to the user profile.
-
-### 11. Test for Submitting a Collaboration Request
-
-- **Test Name**: `test_successful_collaboration_request_submission`
-- **Description**: Verifies that a collaboration request can be successfully submitted.
-- **Expected Outcome**:
-  - Status code is 200 (OK).
-  - Page content includes specific text: "Collaboration request received! I endeavour to respond within 2 working days."
-
-### 12. Test for Search Functionality
-
-- **Test Name**: `test_search_functionality`
-- **Description**: Verifies that the search functionality works correctly and returns the expected results.
-- **Expected Outcome**:
-  - Status code is 200 (OK).
-  - Page content includes search results matching the query.
-</details>
-
-### ERD
-
-  <img src="images_readme/ERD-form.png">
-
-### Bugs to fix
-- When creating a new post, only able to publish and not safe as draft at the momment, site crashing, tried to debug, but unable to fix by the time of subimssion.
-- "Currently" (image) on "Edit Post" page not showing link or image. Image showing under content. Was able to get this working once, but did not saved it, and was not able to get it to work again. Image still shows at the bottom, before update but extra field looks to be part of crispy forms and was not able to make it work.
-- HTML validation for Register (signup page) showing errors that I tried to search on VS-Code and Gitpod but unable to find files to change/correct the code.
-
-[Back to top](#top)
-
-## AI Implementaion and Orchestration
-### Code Generation
-The GitHub Copilot extension was installed in my local version of Visual Studio Code. <br>
-I was able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. <br>
-Had to review suggestions before they were included, as AI can generate code that can refer to different features than the ones intended.<br>
-In this project, Copilot helped with the user account code and different pages creation for this to work as well as in the adaptation of the "Blog" project to the intended site.
-
-### Debugging
-Regularly uesd Copilot for debugging code using the inline editor and also prompting to on VS-Code side chat to request changes to the site and content for the site, as in the About section, that was changed from original project from Code Institute, to meet the needs of my view for the site. 
-
-### Code Optimisation
-When needing to make more complicated changes to code or part of a page, Copilot was used to help fixing them and these were generally tested before pushing to repo.<br>
-It was a great experience to work with AI in this project.<br>
-Using Copilot extension on VS-Code showed me different libraries that where needed for the site to work well, like Pillow libraries from Python, to allow the site to show images uploaded by the user to Cloudinary, as the original project was a written blog with small images next to the title and this was meant to be a different post with images, which was adapted to for the website purposes. 
-
-### Impact on Workflow
-Overall It was useful to work with Copilot and have help to build many parts of the site.<br>
-AI was also a good help to debug and test the code.<br>
-Copilot and other AI as Claude in different ways, have explained the different steps involved in the coding, why some code is better than another.<br>
-Sometimes it can be furstrating to get some suggestions with ghost code that is not needed for the page to work well or changing different pages/files instead of only 1 ir 2 lines of code to fix a bug, but with testing, errors can be fixed.<br>
-Generally, adapting the prompts to make the request specific and concise can help Copilot to give better suggestions to get new features and to improve the site.
 
 ## Credits
 ### Code References
