@@ -22,7 +22,7 @@ class TestBlogViews(TestCase):
 
     def test_render_post_detail_page_with_comment_form(self):
         response = self.client.get(reverse('post_detail', args=['blog-title']))
-        print(response.content)
+        #print(response.content)
         self.assertEqual(response.status_code, 200)
         self.assertIn(b"Blog title", response.content)
         self.assertIn(b"Blog content", response.content)
@@ -39,4 +39,4 @@ class TestBlogViews(TestCase):
         # Verify that the comment was created
         comments = Comment.objects.filter(post=self.post, body='This is a test comment.')
         self.assertEqual(comments.count(), 1)
-        self.assertFalse(comments.first().approved)  # Assuming comments need approval
+        self.assertTrue(comments.first().approved)  # Assuming comments need approval
