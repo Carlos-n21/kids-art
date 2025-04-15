@@ -53,6 +53,16 @@ Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd
     - [Lighthouse Audit](#lighthouse-audit)
     - [Test Results Summary](#test-results-summary)
 - [ERD](#erd)
+- [Bugs to fix](#bugs-to-fix)
+- [AI Implementation and Orchestration](#ai-implementaion-and-orchestration)
+    - [Code Generation](#code-generation)
+    - [Code Optimization](#code-optimisation)
+    - [Impact on Workflow](#impact-on-workflow)
+- [Credits](#credits)
+    - [Code References](#code-references)
+    - [Media References](#media-references)
+    - [Acknowledgments](#acknowledgements)
+    - [Owner Details](#owner-details)
 
 
 [Back to top](#top)
@@ -612,15 +622,15 @@ Generally, adapting the prompts to make the request specific and concise can hel
 Website was inspired on the "Blog" walkthrough project by [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) using HTML, CSS, Javascript, Django, Python and other extra tools to allow the user to be able to login into the page without having to use the admin panel.
 <br>
 
-## Media References
+### Media References
 [LOGO.com](https://logo.com/) Used to make the website logo<br>
 [Art-K.co.uk](https://www.art-k.co.uk/) Used as an inspiration for the site.
 
-## Acknowledgements
+### Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
 Code Institute tutors and Bootcamp Coding Coaches for helping my queries.
 
-## Owner Details
+### Owner Details
 This website was adapted by Carlos Neves, student of Code Institute.<br>
 
 [LinkedIn](https://www.linkedin.com/in/c-neves/)
