@@ -8,7 +8,7 @@ This project was envisioned as a way for parents to share their kids artwrok wit
 
 Main objective is to showcase the use of DJango, Database management, and CRUD functionality.<br>
 
-Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd75b696a.herokuapp.com/)
+Live site: [Kids-Art](https://kids-art-03ecd75b696a.herokuapp.com/)
 
 ## Table of Contents
 - [Kids-Art](#kids-art)
