@@ -452,7 +452,6 @@ Used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_
 
   <img src="images_readme/CSS-validation.png">
 
-
 ### Lighthouse Audit
 
 Used Chrome Dev Tools Lighthouse to audit the site for response time and accessibility.<br>
@@ -593,22 +592,22 @@ Website was inspired on the "Blog" walkthrough project by [Code Institute Bootca
 #### Code Generation
 The GitHub Copilot extension was installed in my local version of Visual Studio Code. <br>
 I was able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. <br>
-Had to review suggestions before they were included, as AI can generate code that can refer to different features than the ones intended.
+Had to review suggestions before they were included, as AI can generate code that can refer to different features than the ones intended.<br>
 In this project, Copilot helped with the user account code and different pages creation for this to work as well as in the adaptation of the "Blog" project to the intended site.
 
 #### Debugging
 Regularly uesd Copilot for debugging code using the inline editor and also prompting to on VS-Code side chat to request changes to the site and content for the site, as in the About section, that was changed from original project from Code Institute, to meet the needs of my view for the site. 
 
 #### Code Optimisation
-When needing to make more complicated changes to code or part of a page, Copilot was used to help fixing them and these were generally tested before pushing to repo, although, there was one feature where this did not happen by my mistake and unable to check at which point it stopped working well - update comment and current image that are described on bugs/errors to be fixed.
-Though this did finished well, it was a great experience to work with AI in this project.
-VS-Code with copilot also showed me different libraries that where needed for the site to work well, like Pillow libraries from Python, to allow the site to show images uploaded by the user to Cloudinary, as the original project was a written blog with small images next to the title and this was meant to be a different post with images, which was adapted to for the website purposes. 
+When needing to make more complicated changes to code or part of a page, Copilot was used to help fixing them and these were generally tested before pushing to repo.<br>
+It was a great experience to work with AI in this project.<br>
+Using Copilot extension on VS-Code showed me different libraries that where needed for the site to work well, like Pillow libraries from Python, to allow the site to show images uploaded by the user to Cloudinary, as the original project was a written blog with small images next to the title and this was meant to be a different post with images, which was adapted to for the website purposes. 
 
 #### Impact on Workflow
-Overall It was useful to work with Copilot and have help to build many parts of the site.
-Also debug and test the code.
-Copilot and other AI as Claude in different ways, have explained the different steps involved in the coding, why some code is better than another.
-Sometimes it can be furstrating to get some suggestions with ghost code that is not needed for the page to work well or changing different pages/files instead of only 1 ir 2 lines of code to fix a bug, but with testing, errors can be fixed.
+Overall It was useful to work with Copilot and have help to build many parts of the site.<br>
+AI was also a good help to debug and test the code.<br>
+Copilot and other AI as Claude in different ways, have explained the different steps involved in the coding, why some code is better than another.<br>
+Sometimes it can be furstrating to get some suggestions with ghost code that is not needed for the page to work well or changing different pages/files instead of only 1 ir 2 lines of code to fix a bug, but with testing, errors can be fixed.<br>
 Generally, adapting the prompts to make the request specific and concise can help Copilot to give better suggestions to get new features and to improve the site.
 
 ### Media References
@@ -621,6 +620,7 @@ Code Institute tutors and Bootcamp Coding Coaches for helping my queries.
 
 ### Owner Details
 This website was adapted by Carlos Neves, student of Code Institute.<br>
+
 [LinkedIn](https://www.linkedin.com/in/c-neves/)
 
 [Back to top](#top)
