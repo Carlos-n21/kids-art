@@ -523,15 +523,15 @@ Also checked Python using [CI Python Linter](https://pep8ci.herokuapp.com/#), wi
 <img src="images_readme\CI-Python-Linter-2.png">
 
 The pages checked were:
- - [about\test_forms.py](about\test_forms.py)
- - [about\test_views.py](about\test_views.py)
- - [blog\test_forms.py](blog\test_forms.py)
- - [blog\test_views.py](blog\test_views.py) 
+ - [about/test_forms.py](about/test_forms.py)
+ - [about/test_views.py](about/test_views.py)
+ - [blog/test_forms.py](blog/test_forms.py)
+ - [blog/test_views.py](blog/test_views.py) 
 
 ### JavaScript Test
 Javascript was tested on 2 pages below:
- - [static\js\comments.js](static\js\comments.js)
- - [static\js\script.js](static\js\script.js)
+ - [static/js/comments.js](static/js/comments.js)
+ - [static/js/script.js](static/js/script.js)
 
 On both pages, after fixing/updating the code, the result was no errors, as can be seen in the example below:
 <img src="images_readme\jsHint-1.png">
