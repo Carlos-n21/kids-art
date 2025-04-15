@@ -15,39 +15,45 @@ Live site: [https://kids-art-03ecd75b696a.herokuapp.com/](https://kids-art-03ecd
     - [Introduction](#introduction)
     - [Table of Contents](#table-of-contents)
     - [Overview](#overview)
-- [User Experience](#ux---user-experience)
-- [Project Brief](#project-brief)
-- [Users](#users)
-- [Project Plan](#project-plan)
-- [User Stories](#user-stories)
-- [Wireframes](#wireframes)
-- [Design](#design)
+- [Ux - User Experience](#ux---user-experience)
     - [Colour Scheme](#colour-scheme)
+    - [Contrast Check](#contrast-check)
     - [Typography](#typography)
-    - [Imagery](#imagery)
-- [Website Features](#website-features)
-    - [Homepage](#homepage)
-    - [Footer](#footer)
-    - [Pagination](#pagination)
-    - [Profile](#profile)
-    - [Create Post](#create-post)
-- [Responsive Design](#responsive-design)
+- [Project Planning](#project-planning)
+    - [Strategy Plane](#strategy-plane)
+      - [Agile Methodologies](#agile-methodologies)
+      - [Users](#users)
+      - [MoSCoW Prioritorization](#moscow-prioritorization)
+      - [User Stories](#user-stories)
+    - [Scope Plane](#scope-plane)
+    - [Structural Plane](#structural-plane)
+      - [Homepage](#homepage)
+        - [Footer](#footer)
+        - [Pagination](#pagination)
+      - [Profile](#profile)
+      - [Create Post](#create-post)
+    - [Skeleton & Surface Planes](#skeleton--surface-planes)
+      - [Wireframes](#wireframes)
+      - [Imagery](#imagery)
 - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
+    - [Languages and Technologies](#languages-and-technologies)
+    - [Libraries](#libraries)
+    - [Tools and Programs](#tools-and-programs)
 - [Deployment](#deployment)
+    - [Connecting to GigHub](#connecting-to-github)
+    - [Django Project Setup](#django-project-setup)
+    - [Cloudinary API](#cloudinary-api)
+    - [Heroku Deployment](#heroku-deployment)
+    - [Clone Project](#clone-project)
+    - [Fork Project](#fork-project)
 - [Testing](#testing)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
     - [Lighthouse Audit](#lighthouse-audit)
-    - [Tests Results Summary](#test-results-summary)
-    - [ERD](#erd)
-    - [Bugs to fix](#bugs-to-fix)
-- [Credits](#credits)
-    - [Code References](#code-references)
-    - [Use of AI](#use-of-ai)
-    - [Media References](#media-references)
-    - [Acknowledgements](#acknowledgements)
-    - [Owner Details](#owner-details)
+    - [Test Results Summary](#test-results-summary)
+- [ERD](#erd)
+
 
 [Back to top](#top)
 
@@ -568,57 +574,53 @@ Below are results compiled by Copilot for brief explanation, that would allow al
   - Page content includes search results matching the query.
 </details>
 
-
 ### ERD
 
   <img src="images_readme/ERD-form.png">
 
-
 ### Bugs to fix
-- Comments update function on posts not working well, able to show updated comment but not deleting comment that was edited.
 - When creating a new post, only able to publish and not safe as draft at the momment, site crashing, tried to debug, but unable to fix by the time of subimssion.
 - "Currently" (image) on "Edit Post" page not showing link or image. Image showing under content. Was able to get this working once, but did not saved it, and was not able to get it to work again. Image still shows at the bottom, before update but extra field looks to be part of crispy forms and was not able to make it work.
 - HTML validation for Register (signup page) showing errors that I tried to search on VS-Code and Gitpod but unable to find files to change/correct the code.
 
-
 [Back to top](#top)
 
-## Credits
-### Code References
-Website was inspired on the "Blog" walkthrough project by [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) using HTML, CSS, Javascript, Django, Python and other extra tools to allow the user to be able to login into the page without having to use the admin panel.
-<br>
-
-## Use of AI
-#### Code Generation
+## AI Implementaion and Orchestration
+### Code Generation
 The GitHub Copilot extension was installed in my local version of Visual Studio Code. <br>
 I was able to write prompts or highlight functions in pseudocode and ask Copilot to suggest code snippets. <br>
 Had to review suggestions before they were included, as AI can generate code that can refer to different features than the ones intended.<br>
 In this project, Copilot helped with the user account code and different pages creation for this to work as well as in the adaptation of the "Blog" project to the intended site.
 
-#### Debugging
+### Debugging
 Regularly uesd Copilot for debugging code using the inline editor and also prompting to on VS-Code side chat to request changes to the site and content for the site, as in the About section, that was changed from original project from Code Institute, to meet the needs of my view for the site. 
 
-#### Code Optimisation
+### Code Optimisation
 When needing to make more complicated changes to code or part of a page, Copilot was used to help fixing them and these were generally tested before pushing to repo.<br>
 It was a great experience to work with AI in this project.<br>
 Using Copilot extension on VS-Code showed me different libraries that where needed for the site to work well, like Pillow libraries from Python, to allow the site to show images uploaded by the user to Cloudinary, as the original project was a written blog with small images next to the title and this was meant to be a different post with images, which was adapted to for the website purposes. 
 
-#### Impact on Workflow
+### Impact on Workflow
 Overall It was useful to work with Copilot and have help to build many parts of the site.<br>
 AI was also a good help to debug and test the code.<br>
 Copilot and other AI as Claude in different ways, have explained the different steps involved in the coding, why some code is better than another.<br>
 Sometimes it can be furstrating to get some suggestions with ghost code that is not needed for the page to work well or changing different pages/files instead of only 1 ir 2 lines of code to fix a bug, but with testing, errors can be fixed.<br>
 Generally, adapting the prompts to make the request specific and concise can help Copilot to give better suggestions to get new features and to improve the site.
 
-### Media References
+## Credits
+### Code References
+Website was inspired on the "Blog" walkthrough project by [Code Institute Bootcamp LMS](https://learn.codeinstitute.net/dashboard) using HTML, CSS, Javascript, Django, Python and other extra tools to allow the user to be able to login into the page without having to use the admin panel.
+<br>
+
+## Media References
 [LOGO.com](https://logo.com/) Used to make the website logo<br>
 [Art-K.co.uk](https://www.art-k.co.uk/) Used as an inspiration for the site.
 
-### Acknowledgements
+## Acknowledgements
 Everyone in our WECA group who have been so helpful and supportive leading up to this group project, and
 Code Institute tutors and Bootcamp Coding Coaches for helping my queries.
 
-### Owner Details
+## Owner Details
 This website was adapted by Carlos Neves, student of Code Institute.<br>
 
 [LinkedIn](https://www.linkedin.com/in/c-neves/)
