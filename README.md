@@ -463,8 +463,8 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
   <img src="images_readme/lighthouse-profile.png">
   <img src="images_readme/lighthouse-editpost.png">
   <img src="images_readme/lighthouse-newpost.png">
+  <img src="images_readme\lighthouse-post-detail.png">
 </details>
-
 
 ### Test Results Summary
 Testing done following LMS from CI testing and adapted with Copilot.
