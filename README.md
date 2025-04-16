@@ -58,8 +58,9 @@ Live site: [Kids-Art](https://kids-art-03ecd75b696a.herokuapp.com/)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
     - [Lighthouse Audit](#lighthouse-audit)
-    - [Python Tests](#python-tests)
-    - [JavaScript Test](#javascript-test)
+    - [Python Tests & Check](#python-tests--check)
+    - [JavaScript Check](#javascript-check)
+    - [Manual Testing](#manual-testing)
 - [Future Features](#future-features)
 - [Credits](#credits)
     - [Code References](#code-references)
@@ -513,7 +514,7 @@ Used Chrome Dev Tools Lighthouse to audit the site for response time and accessi
   <img src="images_readme\lighthouse-post-detail.png">
 </details>
 
-### Python Tests
+### Python Tests & Check
 Python tests were done on VS-Code, using command "python manage.py test --verbosity=1", as can be seen in the image below:
 
 <img src="images_readme\python-testing.png">
@@ -528,13 +529,30 @@ The pages checked were:
  - [blog/test_forms.py](blog/test_forms.py)
  - [blog/test_views.py](blog/test_views.py) 
 
-### JavaScript Test
-Javascript was tested on 2 pages below:
+### JavaScript Check
+Javascript was checked on 2 pages below:
  - [static/js/comments.js](static/js/comments.js)
  - [static/js/script.js](static/js/script.js)
 
 On both pages, after fixing/updating the code, the result was no errors, as can be seen in the example below:
 <img src="images_readme\jsHint-1.png">
+
+### Manual Testing
+Website manually tested on the following devices/browsers for responsiveness:
+  - Google Chrome
+  - Mozilla Firefox
+  - Opera
+  - Vivaldi
+  - Samsung Galaxy A40
+  - Google Pixel 8
+
+Features tested:
+  - Creating new comment
+  - Edit/update comment
+  - Delete comment
+  - Creating new post
+  - Edit/update post
+  - Delete post
 
 ## Future Features
 - Add likes to posts.
