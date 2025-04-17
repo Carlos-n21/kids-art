@@ -98,6 +98,8 @@ The "splash" can be found in kids clothes when they pain, can also be a bit of p
 
 The short "motto" enhances what the site is about.<br>
 
+[Back to top](#top)
+
 ## Colour Scheme
 For Kids-Art, I tried to select colors that create a high contrast for easier readability, with light colors to keep the site simple and open to everyone.
 
@@ -124,6 +126,8 @@ For the website logo and title, used Caveat Brush and Open Sans, as per bellow i
   <img src="images_readme/Caveat-brush.png"> 
   <img src="images_readme/open-sans.png">
 
+[Back to top](#top)
+
 # Project Planning
 The main goal for this project was to create a fun and simple website, easy to use and accessible in different devices.
 
@@ -148,6 +152,8 @@ The main features can be seen on the [GitHub Project Board](https://github.com/u
 With each iteration of the Agile methogologies, the website was improved and I did my best to improve my skills and knowledge of the project management, which I had used in previous projects, but that can always be improved.
 
 These will also be very important for future projects, either personal or professional, with Hackathons being a great way to also get more practice with Agile methodologies.
+
+[Back to top](#top)
 
 ### Users
 Persona 1: The Proud Parent<br>
@@ -241,6 +247,8 @@ Allows the user to see the post created, with option to edit them (in a differen
   <img src="images_readme/new-post.png">
 
 The user can create a new post, after filling all the fields presented, except the Slug, that is automatically filled when filling the Title.
+
+[Back to top](#top)
 
 # Skeleton & Surface Planes
 ## Wireframes
@@ -372,6 +380,8 @@ A Procfile must be created within the project repo for Heroku deployment with th
 
 Make the necessary migrations again.
 
+[Back to top](#top)
+
 ### Cloudinary API
 Cloudinary provides a cloud hosting solution for media storage. All users uploaded images in the FreeFid project are hosted here.
 
@@ -419,6 +429,8 @@ SECRET_KEY and value<br>
   - Choose from 'Automatic' or 'Manual' deployment options, I chose the 'Manual' deployment method. Click 'Deploy Branch'.
 
   - Once the waiting period for the app to build has finished, click the 'View' link to bring you to your newly deployed site. If you receive any errors, Heroku will display a reason in the app build log for you to investigate. DISABLE_COLLECTSTATIC may be removed from the Config Vars once you have saved and pushed an image within your project, as can PORT:8000.
+
+[Back to top](#top)
 
 ### Clone project
 A local clone of this repository can be made on GitHub. Please follow the below steps:
@@ -478,6 +490,8 @@ AI was also a good help to debug and test the code.<br>
 Copilot and other AI as Claude in different ways, have explained the different steps involved in the coding, why some code is better than another.<br>
 Sometimes it can be furstrating to get some suggestions with ghost code that is not needed for the page to work well or changing different pages/files instead of only 1 ir 2 lines of code to fix a bug, but with testing, errors can be fixed.<br>
 Generally, adapting the prompts to make the request specific and concise can help Copilot to give better suggestions to get new features and to improve the site.
+
+[Back to top](#top)
 
 ## Testing
 Validation of HTML/CSS, Lighthouse Audits, Bugs
@@ -553,6 +567,8 @@ Features tested:
   - Creating new post
   - Edit/update post
   - Delete post
+
+[Back to top](#top)
 
 ## Future Features
 - Add likes to posts.
