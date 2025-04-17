@@ -279,8 +279,8 @@ Some of the original sites used to get images for ficticious posts on the websit
   - [phhere.com](https://pxhere.com/en/photo/887571)
   - [NPS](https://www.nps.gov/neri/learn/news/youth-arts-in-the-parks-2023-art-contest-near-deadline.htm)
 
-Hero Image
-  <img src="images_readme/painting-ideas.jpg">
+Hero Image<br>
+  <img src="images_readme/painting-ideas.jpg" style="height: 50%; width: 50%;">
   
 Logo Image<br>
   <img src="images_readme/logo-no-background.png" style="heigth: 200px; width: 200px"><br>
